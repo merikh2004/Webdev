@@ -146,6 +146,9 @@ $pdf->SetCol(0);
 $pdf->y0 = $pdf->GetY();   
 $pdf->MultiCell(60, 4, $clues);
 
+
+
+
 $pdf->AddPage();
 
 
@@ -192,5 +195,64 @@ $pdf->Cell(0,5,'Answer Key',0,1,'C');
 $pdf->CrosswordGrid($gridWithAnswer);
 $pdf->Ln(count($gridWithAnswer)*5+3);
 $yStart = $pdf->GetY();
+
+
+$Answer = "ACROSS\n"
+  . "7. IMPLEMENTATION\n"
+  . "9. ANDGATE\n"
+  . "11. EXCEPTION\n"
+  . "13. BYTE\n"
+  . "15. CPU\n"
+  . "16. RECORD\n"
+  . "18. RAM\n"
+  . "22. ASYMMETRIC\n"
+  . "24. CACHE\n"
+  . "26. ADA LOVELACE\n"
+  . "29. ROUTER\n"
+  . "30. SQL\n"
+  . "31. ERD\n"
+  . "32. BIGO\n"
+  . "33. CPU\n"
+  . "35. CACHE\n"
+  . "38. CSS\n"
+  . "39. GRAPH\n"
+  . "40. HASHING\n"
+  . "41. SEMICOLON\n"
+  . "43. MONITOR\n"
+  . "44. DEBUGGING\n"
+  . "46. COMPUTER\n"
+  . "48. WEBSITE\n"
+  . "49. BUBBLESORT\n"
+  . "50. MAINMEMORY\n"
+  . "DOWN\n"
+  . "1. HTML\n"
+  . "2. QUEUE\n"
+  . "3. BIT\n"
+  . "4. GIGABYTE\n"
+  . "5. STACK\n"
+  . "6. COMPILER\n"
+  . "8. RINGBUFFER\n"
+  . "10. PYTHON\n"
+  . "12. BACKEND\n"
+  . "14. PROTOCOL\n"
+  . "17. ENCAPSULATION\n"
+  . "19. MACHINELEARNING\n"
+  . "20. V8\n"
+  . "21. QUICKSORT\n"
+  . "23. FIREWALL\n"
+  . "25. FUNCTION\n"
+  . "27. LOOP\n"
+  . "28. HDD\n"
+  . "34. PYTHON\n"
+  . "36. HTTP\n"
+  . "37. NOSQL\n"
+  . "42. INTERNET\n"
+  . "45. BINARY\n"
+  . "47. TABLE";
+
+$pdf->SetFont('Arial','',8);
+$pdf->SetCol(0);         
+$pdf->y0 = $pdf->GetY();   
+$pdf->MultiCell(60, 4, $Answer);
 
 $pdf->Output();
